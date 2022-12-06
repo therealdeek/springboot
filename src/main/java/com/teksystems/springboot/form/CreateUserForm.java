@@ -1,4 +1,4 @@
-package form;
+package com.teksystems.springboot.form;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package security;
+package com.teksystems.springboot.security;
 
 import java.util.Collection;
 
@@ -74,4 +74,6 @@ public class AuthenticatedUserService {
 
         return (authentication != null && authentication.isAuthenticated());
     }
+
+
 }

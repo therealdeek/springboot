@@ -4,7 +4,7 @@ import com.teksystems.springboot.database.dao.UserDAO;
 import com.teksystems.springboot.database.dao.UserRoleDAO;
 import com.teksystems.springboot.database.entity.User;
 import com.teksystems.springboot.database.entity.UserRole;
-import form.CreateUserForm;
+import com.teksystems.springboot.form.CreateUserForm;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -93,7 +93,7 @@ public class LoginController {
 
         } else {
             response.addObject("bindingResult", bindingResult);
-            response.addObject("form", form);
+            response.addObject("com/teksystems/springboot/form", form);
         }
 
         return response;
