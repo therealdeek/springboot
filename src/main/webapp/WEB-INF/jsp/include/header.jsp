@@ -13,7 +13,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
-
 <!-- include bootstrap here -->
 <!-- include global CSS files here -->
 
@@ -21,7 +20,7 @@
 
 <div class="container">
 	<div class="row mt-1 mb-3 justify-content-center">
-		<div class="col-6">
+		<div class="col-12">
 			<a href="/">Home</a> |
 			<a href="/user/createuser">Create User</a> |
 
@@ -30,6 +29,8 @@
 			</sec:authorize>
 
 			<sec:authorize access="isAuthenticated()">
+				<a href="/ajax">Ajax Example</a> |
+				<a href="/fileupload">File upload</a> |
 				<a href="/user/logout">Logout</a> |
 				<sec:authentication property="principal.username" />
 			</sec:authorize>

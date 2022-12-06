@@ -15,11 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -244,21 +240,32 @@ public class IndexController {
 
 		return response;
 	}
-
-	@RequestMapping(value = {"/ajax"}, method = RequestMethod.GET)
+	@RequestMapping(value = { "/ajax" }, method = RequestMethod.GET)
 	public ModelAndView ajax() {
-
 		ModelAndView response = new ModelAndView();
 		response.setViewName("ajax");
 
 		return response;
-
 	}
+
+//	@ResponseBody
+//	@RequestMapping(value = { "/ajaxcall" }, method = RequestMethod.GET)
+//	public String ajaxCall(@RequestParam String clickedValue) {
+//		log.debug("in the ajax call method : " + clickedValue);
+//
+//		return "success from server : " + clickedValue;
+//	}
+
 	@ResponseBody
-	@RequestMapping(value = {"/ajaxcall"}, method = RequestMethod.GET)
-	public String ajaxCall() {
-		log.debug("in the ajax call method");
+	@RequestMapping(value = { "/ajaxcall" }, method = RequestMethod.GET)
+	public Course ajaxCall(@RequestParam String clickedValue) {
+		log.debug("in the ajax call method : " + clickedValue);
 
-		return "success from server";
+		Course c  = courseDao.findByName(clickedValue);
+
+		log.debug("course found : " + c);
+
+		return c;
 	}
+
 }

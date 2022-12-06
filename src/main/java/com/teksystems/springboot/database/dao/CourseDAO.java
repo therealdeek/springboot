@@ -28,10 +28,17 @@ public interface CourseDAO extends JpaRepository<Course, Long> {
 
 	public Course findById(Integer id);
 
+	public Course findByName(String name);
+
 	@Query( value = "select instructor, count(*) as cnt "
 			+ "from course "
 			+ "where instructor is not null and instructor != \"\" "
 			+ "group by instructor "
 			+ "order by instructor", nativeQuery = true)
 	public List<Map<String,Object>> instructorCourseCount();
+
+
+
+
+
 }
