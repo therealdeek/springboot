@@ -60,7 +60,7 @@ public class IndexController {
 	// BONUS : make a single query that can search by course name or instructor
 	// name.
 
-	@RequestMapping(value = { "/", "/index", "/index.html" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/index", "/index.html"}, method = RequestMethod.GET)
 	public ModelAndView slash(@RequestParam(required = false) String courseName,
 							  @RequestParam(required = false) String instructorName) {
 
@@ -87,7 +87,7 @@ public class IndexController {
 		// }
 
 		// if the user is authenticated
-		if ( authService.isAuthenticated() ) {
+		if (authService.isAuthenticated()) {
 			boolean isAdmin = authService.isUserInRole("ADMIN");
 			log.debug(authService.getCurrentUsername() + " is current logged in and admin access = " + isAdmin);
 			log.debug(authService.getCurrentUser() + "");
@@ -98,14 +98,14 @@ public class IndexController {
 		return response;
 	}
 
-	@RequestMapping(value = { "/search" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/search"}, method = RequestMethod.GET)
 	public ModelAndView search() {
 		System.out.println("Index controller search request");
 
 		return null;
 	}
 
-	@RequestMapping(value = { "/course" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/course"}, method = RequestMethod.GET)
 	public ModelAndView course() {
 		// this method is called when /course is in the URL
 		log.info("Index controller course request method");
@@ -117,7 +117,7 @@ public class IndexController {
 		return response;
 	}
 
-	@RequestMapping(value = { "/courseSubmit" }, method = { RequestMethod.POST, RequestMethod.GET })
+	@RequestMapping(value = {"/courseSubmit"}, method = {RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView courseSubmit(@RequestParam(required = false) String courseName,
 									 @RequestParam(required = false) String instructorName) {
 
@@ -169,7 +169,7 @@ public class IndexController {
 	private String value = "X";
 
 	@ResponseBody
-	@RequestMapping(value = { "/course/path/{id}" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/course/path/{id}"}, method = RequestMethod.GET)
 	public Course pathVar(@PathVariable Integer id, HttpSession session) {
 		log.info("Incoming path variable = " + id);
 
@@ -187,7 +187,7 @@ public class IndexController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = { "/course/all" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/course/all"}, method = RequestMethod.GET)
 	public List<Course> allCourses() {
 		log.error("This is an error");
 		log.warn("This is a warning");
@@ -201,13 +201,13 @@ public class IndexController {
 		return courses;
 	}
 
-	@RequestMapping(value = { "/course/instructor" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/course/instructor"}, method = RequestMethod.GET)
 	public ModelAndView instCount() {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("instructor_count");
 
-		List<Map<String,Object>> instructorCounts = courseDao.instructorCourseCount();
-		for ( Map<String,Object> count : instructorCounts ) {
+		List<Map<String, Object>> instructorCounts = courseDao.instructorCourseCount();
+		for (Map<String, Object> count : instructorCounts) {
 			log.debug(count.get("instructor") + " is teaching " + count.get("cnt") + " course(s)");
 		}
 
@@ -216,7 +216,7 @@ public class IndexController {
 		return response;
 	}
 
-	@RequestMapping(value = { "/fileupload" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/fileupload"}, method = RequestMethod.GET)
 	public ModelAndView fileupload() {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("fileupload");
@@ -224,18 +224,18 @@ public class IndexController {
 		return response;
 	}
 
-	@RequestMapping(value = { "/fileuploadSubmit" }, method = RequestMethod.POST)
+	@RequestMapping(value = {"/fileuploadSubmit"}, method = RequestMethod.POST)
 	public ModelAndView fileuploadSubmit(@RequestParam MultipartFile file) throws IOException {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("fileupload");
 
 		log.debug("Filename  = " + file.getOriginalFilename());
-		log.debug("File Size = " + file.getSize() + " bytes" );
+		log.debug("File Size = " + file.getSize() + " bytes");
 
 		// step 1 : this will save the file to the disk .. within your project in the pub/images folder
 		File targetFile = new File("./src/main/webapp/pub/images/" + file.getOriginalFilename());
 		FileUtils.copyInputStreamToFile(file.getInputStream(), targetFile);
-		log.debug("File Path = " + targetFile.getAbsolutePath() );
+		log.debug("File Path = " + targetFile.getAbsolutePath());
 
 		// step 2 : this URL goes in the database as to where the image was saved
 		String url = "/pub/images/" + file.getOriginalFilename();
@@ -245,4 +245,20 @@ public class IndexController {
 		return response;
 	}
 
+	@RequestMapping(value = {"/ajax"}, method = RequestMethod.GET)
+	public ModelAndView ajax() {
+
+		ModelAndView response = new ModelAndView();
+		response.setViewName("ajax");
+
+		return response;
+
+	}
+	@ResponseBody
+	@RequestMapping(value = {"/ajaxcall"}, method = RequestMethod.GET)
+	public String ajaxCall() {
+		log.debug("in the ajax call method");
+
+		return "success from server";
+	}
 }

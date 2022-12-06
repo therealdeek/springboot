@@ -24,8 +24,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // this line of code specifies all URLs that do not need authentication to view
                 .antMatchers("/pub/**", "/user/**", "/", "/index").permitAll()
                 // this line of code tells spring security that all URLs can only be accessed if the user
-                // is authenticated.   This is authetnication only and does not care about authorization.
-                // authorization must be implement in the controller to limit by user role
+                // is authenticated.   This is authentication only and does not care about authorization.
+                // authorization must be implemented in the controller to limit by user role
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
