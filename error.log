@@ -650,3 +650,60 @@ Consider defining a bean of type 'security.AuthenticatedUserService' in your con
 2022-12-06 14:56:11.529  INFO 22597 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-12-06 14:56:11.537  INFO 22597 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-12-06 14:56:11.550  INFO 22597 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-06 15:39:52.393  INFO 23253 --- [restartedMain] c.t.springboot.SpringbootApplication     : Starting SpringbootApplication using Java 11.0.17 on MacBook-Air.lan with PID 23253 (/Users/therealdee_k/Java Class Example/springboot/target/classes started by therealdee_k in /Users/therealdee_k/Java Class Example/springboot)
+2022-12-06 15:39:52.394 DEBUG 23253 --- [restartedMain] c.t.springboot.SpringbootApplication     : Running with Spring Boot v2.7.5, Spring v5.3.23
+2022-12-06 15:39:52.394  INFO 23253 --- [restartedMain] c.t.springboot.SpringbootApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-12-06 15:39:52.427  INFO 23253 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-06 15:39:52.427  INFO 23253 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-06 15:39:52.937  INFO 23253 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-06 15:39:52.981  INFO 23253 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2022-12-06 15:39:53.499  INFO 23253 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-06 15:39:53.508  INFO 23253 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-06 15:39:53.508  INFO 23253 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-06 15:39:53.671  INFO 23253 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-06 15:39:53.680  INFO 23253 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-06 15:39:53.680  INFO 23253 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1253 ms
+2022-12-06 15:39:53.814  INFO 23253 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-06 15:39:53.852  INFO 23253 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-06 15:39:53.966  INFO 23253 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-06 15:39:54.034  INFO 23253 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-06 15:39:54.335  INFO 23253 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-06 15:39:54.349  INFO 23253 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2022-12-06 15:39:55.063  INFO 23253 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-06 15:39:55.071  INFO 23253 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-06 15:39:55.126  WARN 23253 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-06 15:39:55.715  INFO 23253 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2db2f396, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f28b905, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a17f072, org.springframework.security.web.header.HeaderWriterFilter@786ed682, org.springframework.security.web.authentication.logout.LogoutFilter@7e6b8abf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3c92d304, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37e74129, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5da0ca85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ba7574f, org.springframework.security.web.session.SessionManagementFilter@18672225, org.springframework.security.web.access.ExceptionTranslationFilter@4dab48d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6965e87b]
+2022-12-06 15:39:55.846  INFO 23253 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-12-06 15:39:55.996  INFO 23253 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-06 15:39:56.037  INFO 23253 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-06 15:39:56.045  INFO 23253 --- [restartedMain] c.t.springboot.SpringbootApplication     : Started SpringbootApplication in 3.941 seconds (JVM running for 4.392)
+2022-12-06 15:40:14.673  INFO 23253 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-06 15:40:14.674  INFO 23253 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-06 15:40:14.678  INFO 23253 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-12-06 15:40:25.822 DEBUG 23253 --- [http-nio-8080-exec-2] c.t.s.controller.LoginController         : This is in the GET method for create user
+2022-12-06 15:41:47.385 DEBUG 23253 --- [http-nio-8080-exec-5] c.t.s.controller.LoginController         : This is in the POST method for create user
+2022-12-06 15:41:47.396 DEBUG 23253 --- [http-nio-8080-exec-5] c.t.s.controller.LoginController         : CreateUserForm(email=mikeT@punchout.com, password=password, confirmPassword=null, firstName=Mike, lastName=Tyson, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:42:51.247 DEBUG 23253 --- [http-nio-8080-exec-9] c.t.s.controller.IndexController         : mikeT@punchout.com is current logged in and admin access = false
+2022-12-06 15:42:51.263 DEBUG 23253 --- [http-nio-8080-exec-9] c.t.s.controller.IndexController         : User(id=5, firstName=Mike, lastName=Tyson, email=mikeT@punchout.com, password=$2a$10$4.Y6kLghHe88R5xeRA4f4uMD/XS8JX6z4L.y5CBBaJzsdu74/GeBO, createDate=2022-12-06 15:41:47.0, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:43:32.289 DEBUG 23253 --- [http-nio-8080-exec-1] c.t.s.controller.IndexController         : in the ajax call method : JavaScript
+2022-12-06 15:43:32.310 DEBUG 23253 --- [http-nio-8080-exec-1] c.t.s.controller.IndexController         : course found : null
+2022-12-06 15:43:42.859 DEBUG 23253 --- [http-nio-8080-exec-2] c.t.s.controller.IndexController         : in the ajax call method : CSS
+2022-12-06 15:43:42.874 DEBUG 23253 --- [http-nio-8080-exec-2] c.t.s.controller.IndexController         : course found : null
+2022-12-06 15:43:54.023 DEBUG 23253 --- [http-nio-8080-exec-4] c.t.s.controller.IndexController         : in the ajax call method : HTML
+2022-12-06 15:43:54.053 DEBUG 23253 --- [http-nio-8080-exec-4] c.t.s.controller.IndexController         : course found : null
+2022-12-06 15:44:14.763 DEBUG 23253 --- [http-nio-8080-exec-6] c.t.s.controller.IndexController         : Filename  = lake-1802337_1920.jpg
+2022-12-06 15:44:14.767 DEBUG 23253 --- [http-nio-8080-exec-6] c.t.s.controller.IndexController         : File Size = 534260 bytes
+2022-12-06 15:44:14.769 DEBUG 23253 --- [http-nio-8080-exec-6] c.t.s.controller.IndexController         : File Path = /Users/therealdee_k/Java Class Example/springboot/./src/main/webapp/pub/images/lake-1802337_1920.jpg
+2022-12-06 15:44:14.770 DEBUG 23253 --- [http-nio-8080-exec-6] c.t.s.controller.IndexController         : File URL  = /pub/images/lake-1802337_1920.jpg
+2022-12-06 15:44:24.380 DEBUG 23253 --- [http-nio-8080-exec-8] c.t.s.controller.IndexController         : mikeT@punchout.com is current logged in and admin access = false
+2022-12-06 15:44:24.381 DEBUG 23253 --- [http-nio-8080-exec-8] c.t.s.controller.IndexController         : User(id=5, firstName=Mike, lastName=Tyson, email=mikeT@punchout.com, password=$2a$10$4.Y6kLghHe88R5xeRA4f4uMD/XS8JX6z4L.y5CBBaJzsdu74/GeBO, createDate=2022-12-06 15:41:47.0, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:44:44.192 DEBUG 23253 --- [http-nio-8080-exec-9] c.t.s.controller.IndexController         : mikeT@punchout.com is current logged in and admin access = false
+2022-12-06 15:44:44.192 DEBUG 23253 --- [http-nio-8080-exec-9] c.t.s.controller.IndexController         : User(id=5, firstName=Mike, lastName=Tyson, email=mikeT@punchout.com, password=$2a$10$4.Y6kLghHe88R5xeRA4f4uMD/XS8JX6z4L.y5CBBaJzsdu74/GeBO, createDate=2022-12-06 15:41:47.0, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:44:49.315 DEBUG 23253 --- [http-nio-8080-exec-10] c.t.s.controller.IndexController         : mikeT@punchout.com is current logged in and admin access = false
+2022-12-06 15:44:49.315 DEBUG 23253 --- [http-nio-8080-exec-10] c.t.s.controller.IndexController         : User(id=5, firstName=Mike, lastName=Tyson, email=mikeT@punchout.com, password=$2a$10$4.Y6kLghHe88R5xeRA4f4uMD/XS8JX6z4L.y5CBBaJzsdu74/GeBO, createDate=2022-12-06 15:41:47.0, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:45:15.081 DEBUG 23253 --- [http-nio-8080-exec-2] c.t.s.controller.IndexController         : mikeT@punchout.com is current logged in and admin access = false
+2022-12-06 15:45:15.081 DEBUG 23253 --- [http-nio-8080-exec-2] c.t.s.controller.IndexController         : User(id=5, firstName=Mike, lastName=Tyson, email=mikeT@punchout.com, password=$2a$10$4.Y6kLghHe88R5xeRA4f4uMD/XS8JX6z4L.y5CBBaJzsdu74/GeBO, createDate=2022-12-06 15:41:47.0, address=101 BiteYaEar Lane, city=Crooklyn, state=NY, zip=74760, phone=9998887777)
+2022-12-06 15:45:22.124 DEBUG 23253 --- [http-nio-8080-exec-4] c.t.s.controller.IndexController         : USER NOT LOGGED IN
+2022-12-06 18:42:20.996  INFO 23253 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-06 18:42:21.016  INFO 23253 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-06 18:42:21.022  INFO 23253 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
